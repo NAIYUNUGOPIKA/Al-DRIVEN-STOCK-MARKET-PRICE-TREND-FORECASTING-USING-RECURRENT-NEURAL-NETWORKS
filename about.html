@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/dashboard">Dashboard</a>
+    <a href="/manual">Manual Input</a>
+    <a href="/about">About</a>
+    <a href="/performance">Performance</a>
+</div>
+
+<div class="box">
+    <h2>About This Project</h2>
+    <p>
+        This project uses Recurrent Neural Networks (LSTM)
+        for stock market price trend forecasting.
+    </p>
+    <p>
+        The system analyzes historical stock data including
+        Open, High, Low, Close, and Volume features.
+    </p>
+    <p>
+        Built using Deep Learning, Flask, and Python.
+    </p>
+</div>
+
+</body>
+</html>

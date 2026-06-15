@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/dashboard">Dashboard</a>
+    <a href="/manual">Manual Input</a>
+    <a href="/about">About</a>
+    <a href="/performance">Performance</a>
+</div>
+
+<div class="box">
+    <h1>Stock Price Prediction</h1>
+
+    <form action="/predict" method="POST">
+        <input type="text" name="stock" placeholder="Enter Stock Symbol (AAPL)" required>
+        <button type="submit">Predict</button>
+    </form>
+
+    {% if prediction %}
+    <div class="result">
+        <h3>{{ stock }} Prediction</h3>
+        <p>Predicted Close Price: {{ prediction }}</p>
+        <p>Prediction Date: {{ prediction_date }}</p>
+    </div>
+    {% endif %}
+</div>
+
+{% if show_graph %}
+<div class="box">
+    <h3>📈 Market Trend</h3>
+    <img src="{{ url_for('static', filename='trend.png') }}" width="100%">
+</div>
+
+
+{% endif %}
+
+</body>
+</html>

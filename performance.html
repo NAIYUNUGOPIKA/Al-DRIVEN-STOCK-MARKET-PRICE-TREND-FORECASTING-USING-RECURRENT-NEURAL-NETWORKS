@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Performance</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <a href="/dashboard">Dashboard</a>
+    <a href="/manual">Manual Input</a>
+    <a href="/about">About</a>
+    <a href="/performance">Performance</a>
+</div>
+
+<div class="box">
+    <h2>Model Performance</h2>
+    <p>Evaluation Metrics Used:</p>
+    <ul style="text-align:left;">
+        <li>RMSE (Root Mean Squared Error)</li>
+        <li>Loss Curves</li>
+        <li>Prediction vs Actual Graphs</li>
+        <li>Directional Accuracy</li>
+    </ul>
+    <p>
+        Multivariate LSTM models were trained individually
+        for each stock.
+    </p>
+</div>
+
+</body>
+</html>
